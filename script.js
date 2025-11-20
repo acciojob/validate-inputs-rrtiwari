@@ -1,10 +1,17 @@
+window.onload = function () {
+    document.querySelectorAll("input[required]").forEach(input => {
+        if (!input.value) {
+            input.style.backgroundColor = "pink"; 
+        }
+    });
+};
 
 function validateName() {
     const pattern = /^[A-Za-z]{3,}$/;
     const input = document.getElementById("name");
 
     if (!input.value) {
-        input.style.backgroundColor = "pink"; 
+        input.style.backgroundColor = "pink";
     } else {
         input.style.backgroundColor = pattern.test(input.value) ? "lightgreen" : "pink";
     }
@@ -26,7 +33,7 @@ function validateMobile() {
     const input = document.getElementById("mobile");
 
     if (!input.value) {
-        input.style.backgroundColor = "pink"; 
+        input.style.backgroundColor = "pink";
     } else {
         input.style.backgroundColor = pattern.test(input.value) ? "lightgreen" : "pink";
     }
