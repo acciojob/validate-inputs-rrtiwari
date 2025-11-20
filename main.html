@@ -17,34 +17,18 @@
 <h2>Input Validation</h2>
 
 <label>Name:</label>
-<input type="text" id="name" placeholder="Enter Name" onkeyup="validateName()">
+<input type="text" id="name" placeholder="Enter Name" required oninput="validateName()">
 
 <label>Email:</label>
-<input type="text" id="email" placeholder="Enter Email" onkeyup="validateEmail()">
+<input type="email" id="email" placeholder="Enter Email" required oninput="validateEmail()">
 
 <label>Mobile:</label>
-<input type="text" id="mobile" placeholder="Enter Mobile" onkeyup="validateMobile()">
+<input type="text" id="mobile" placeholder="Enter Mobile" required oninput="validateMobile()">
 
-<script>
-function validateName() {
-    const pattern = /^[A-Za-z]{3,}$/;
-    const input = document.getElementById("name");
-    input.style.backgroundColor = pattern.test(input.value) ? "lightgreen" : "pink";
-}
-
-function validateEmail() {
-    const pattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-    const input = document.getElementById("email");
-    input.style.backgroundColor = pattern.test(input.value) ? "lightgreen" : "pink";
-}
-
-function validateMobile() {
-    const pattern = /^[0-9]{10}$/;
-    const input = document.getElementById("mobile");
-    input.style.backgroundColor = pattern.test(input.value) ? "lightgreen" : "pink";
-}
-</script>
+<script type="text/javascript" src="./Script.js"></script>
 
 </body>
 </html>
+
+
 
